@@ -20,12 +20,11 @@ export class PeopleService {
 
   fetchData() {
     return this.http.get(environment.api_url)
-      .map((response: Response) => response.json().map(people => People.fromJSON(people)))
-      .subscribe(
-        (data: People[]) => {
-          this.people = data;
-          console.log(this.people);
-        }
-      );
+      .map((response: Response) => response.json().map(people => People.fromJSON(people)));
+      // .subscribe(
+      //   (data: People[]) => {
+      //     this.people = data;
+      //   }
+      // );
   }
 }

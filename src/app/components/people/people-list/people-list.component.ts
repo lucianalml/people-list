@@ -11,11 +11,18 @@ import { PeopleService } from '../../../services/people.service';
 })
 export class PeopleListComponent implements OnInit {
 
-  people: People[] = [];
+  people: People[] ;
 
   constructor(private peopleService: PeopleService) { }
 
   ngOnInit() {
-    this.people = this.peopleService.getPeople();
+    // this.people = this.peopleService.getPeople();
+    this.peopleService.fetchData().subscribe(
+        (data: People[]) => {
+          this.people = data;
+          console.log(this.people);
+        }
+      );
+    
   }
 }

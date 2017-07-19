@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 
 import { PeopleService } from './services/people.service';
 import { PeopleListComponent } from './components/people/people-list/people-list.component';
+import { PeopleDetailComponent } from './components/people/people-detail/people-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PeopleListComponent
+    PeopleListComponent,
+    PeopleDetailComponent
   ],
   imports: [
     BrowserModule,
