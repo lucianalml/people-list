@@ -15,16 +15,7 @@ export class PeopleService {
   constructor(private http: Http) { }
 
   getPeople() {
-    return this.people;
-  }
-
-  fetchData() {
     return this.http.get(environment.api_url)
       .map((response: Response) => response.json().map(people => People.fromJSON(people)));
-      // .subscribe(
-      //   (data: People[]) => {
-      //     this.people = data;
-      //   }
-      // );
   }
 }

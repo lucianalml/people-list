@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-
 import { People } from '../../../people';
 import { PeopleService } from '../../../services/people.service';
 
@@ -16,8 +15,7 @@ export class PeopleListComponent implements OnInit {
   constructor(private peopleService: PeopleService) { }
 
   ngOnInit() {
-    // this.people = this.peopleService.getPeople();
-    this.peopleService.fetchData().subscribe(
+    this.peopleService.getPeople().subscribe(
         (data: People[]) => {
           this.people = data;
           console.log(this.people);
