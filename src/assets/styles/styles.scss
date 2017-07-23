@@ -1,0 +1,14 @@
+@import "variables";
+
+.main-content {
+  position: relative;
+  width: 100%;
+  float: left;
+  padding-top: 110px;
+  @media (max-width: $screen-xs-max) {
+    padding-top: 54px;
+  }
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    padding-top: 145px;
+  }
+}
