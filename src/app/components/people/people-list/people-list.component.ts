@@ -5,8 +5,7 @@ import { PeopleService } from '../../../services/people.service';
 
 @Component({
   selector: 'app-people-list',
-  templateUrl: './people-list.component.html',
-  styleUrls: ['./people-list.component.css']
+  templateUrl: './people-list.component.html'
 })
 export class PeopleListComponent implements OnInit {
 
@@ -18,7 +17,6 @@ export class PeopleListComponent implements OnInit {
     this.peopleService.getPeople().subscribe(
         (data: People[]) => {
           this.people = data;
-          console.log(this.people);
         }
       );
     

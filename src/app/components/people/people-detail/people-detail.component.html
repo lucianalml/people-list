@@ -1,3 +1,8 @@
 
-<h2>{{people.name}}</h2>
-<p>{{people.disclosableInfo}}</p> 
+<div *ngIf="person">
+    <button type="button" routerLink="/" >Close</button>
+    <h1>Detail</h1>
+    <p> Id: {{ person.id }} </p>
+    <p> Name: {{ person.name }} </p>
+    <p> Information: {{ person.disclosableInfo }} </p>
+</div>

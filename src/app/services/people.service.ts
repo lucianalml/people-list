@@ -15,7 +15,15 @@ export class PeopleService {
   constructor(private http: Http) { }
 
   getPeople() {
-    return this.http.get(environment.api_url)
+    let peopleUrl = environment.api_url + '/people';
+    return this.http.get(peopleUrl)
       .map((response: Response) => response.json().map(people => People.fromJSON(people)));
   }
+
+  getPerson(id: number) {
+    let personUrl = environment.api_url + '/people/' + id;
+    return this.http.get(personUrl)
+      .map((response: Response) => People.fromJSON(response.json()));
+  }
+  
 }
