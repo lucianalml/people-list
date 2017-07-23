@@ -10,7 +10,7 @@ import { PeopleService } from '../../../services/people.service';
 })
 export class PeopleDetailComponent implements OnInit {
 
-  private person: People;
+  person: People;
   private id: number;
   private sub: any;
 
