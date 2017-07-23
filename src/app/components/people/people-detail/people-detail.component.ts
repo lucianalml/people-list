@@ -24,7 +24,6 @@ export class PeopleDetailComponent implements OnInit {
       this.sub = this.peopleService.getPerson(this.id).subscribe(
             (data: People) => {
               this.person = data;
-              console.log(this.person);
             }
           );
       });

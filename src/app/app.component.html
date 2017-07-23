@@ -1,8 +1,30 @@
 
-<main class="main-content">    
-  <h1>People List</h1>
+<div class="page">
+    <div class="row">
+        <div class="header col"><h1>People List</h1></div>
+    </div>
 
-  <router-outlet></router-outlet>
-  <app-people-list></app-people-list>        
+    <!-- <div class="row">
+        <div class="navigation col">Navigation</div>
+        <div class="main_content col">Main content</div>
+        <div class="related_content col">Related content</div>
+    </div>
 
-</main>
+    <div class="row">
+      <div class="media_block col">Media block 1</div>
+      <div class="media_block col">Media block 2</div>
+      <div class="media_block col">Media block 3</div>
+  </div> -->
+
+    <div class="row">
+      <div class="col">
+        <router-outlet></router-outlet>
+      </div>
+
+      <div class="col">
+        <app-people-list></app-people-list>
+      </div>
+    </div>
+      
+
+</div>
