@@ -6,13 +6,13 @@
   </div> 
 
   <div class="row"> 
-    <router-outlet></router-outlet>
+    <div class="col"> 
+      <app-people-list></app-people-list>
+    </div>
+    <div class="col detail_content"> 
+      <router-outlet></router-outlet>
+    </div>
   </div>
 
-  <div class="row"> 
-    <app-people-list></app-people-list>
-  </div>
-
-    
 </div>  
 

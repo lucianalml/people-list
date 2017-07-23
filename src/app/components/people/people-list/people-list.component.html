@@ -1,6 +1,11 @@
 
-<div *ngFor="let person of people; let i = index" class="row">
+<p>Select a person for details</p>
+  <ul *ngFor="let person of people; let i = index">
+    <app-people-list-item [people]="person"></app-people-list-item>
+  </ul>
+
+<!-- <div *ngFor="let person of people; let i = index" class="row">
   <div class="col span_3">
     <app-people-list-item [people]="person"></app-people-list-item>
   </div>
-</div>
+</div> -->

@@ -5,6 +5,9 @@
  * Created by @simplygoodwork
  */
 
+
+@import "variables";
+
 /* Reusable column setup */
 
 @mixin col {
@@ -62,7 +65,7 @@ div {
 
     ----------------------------------------------------------------------------- */
 
-	@media screen and (min-width: 0px) and (max-width: 959px) {
+	@media screen and (min-width: 0px) and (max-width: $screen-sm-max) {
         
         .col {
             margin-left:2%;
@@ -74,14 +77,10 @@ div {
         $padding: 0 1.5%;
         $gutter_px: 0;
         $gutter_pc: 2%;
-
-
         
         .row .col:first-child {
             @include span_first;
-        }
-        
-        
+        }        
         /*
         Add your semantic classnames in alongside their corresponding spans here. e.g.
 
@@ -110,6 +109,11 @@ div {
             @include span_first;
             width:100%;
         }
+        .detail_content {
+            @include span_first;
+            width:100%;
+        }
+
     }
 
     /* 2. 6 Column Grid 960px - 1199px
@@ -124,7 +128,7 @@ div {
 
     ----------------------------------------------------------------------------- */
 
-	@media screen and (min-width: 960px) and (max-width: 1199px) {
+	@media screen and (min-width: $screen-md) and (max-width: $screen-md-max) {
         
         .col {
             margin-left:2%;
@@ -152,6 +156,10 @@ div {
         }
         .span_3 {
             @include span(3, $gutter_pc, $gutter_px, $padding, $max_columns);
+        }
+        .detail_content {
+            @include span(3, $gutter_pc, $gutter_px, $padding, $max_columns);
+            height:400px;
         }
         .span_4 {
             @include span(4, $gutter_pc, $gutter_px, $padding, $max_columns);
@@ -177,7 +185,7 @@ div {
 
     ----------------------------------------------------------------------------- */
 
-	@media screen and (min-width: 1200px) {
+	@media screen and (min-width: $screen-lg) {
         
         .col {
             margin-left:2%;
@@ -205,6 +213,10 @@ div {
         }
         .span_3 {
             @include span(3, $gutter_pc, $gutter_px, $padding, $max_columns);
+        }
+        .detail_content {
+            @include span(3, $gutter_pc, $gutter_px, $padding, $max_columns);
+            height:400px;
         }
         .span_4 {
             @include span(4, $gutter_pc, $gutter_px, $padding, $max_columns);
