@@ -21,6 +21,14 @@ export class PeopleDetailComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.id = +params['id'];
 
+      // For github pages
+      // this.sub = this.peopleService.getPeople().subscribe(
+      //       (data: People[]) => {
+      //         this.person = data.find(person => person.id === this.id);
+      //       }
+      //     );
+      // });
+
       this.sub = this.peopleService.getPerson(this.id).subscribe(
             (data: People) => {
               this.person = data;
